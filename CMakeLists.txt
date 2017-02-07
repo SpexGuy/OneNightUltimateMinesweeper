@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.6)
-project(StupidSHTricks)
+project(Minesweeper)
 
 message("Source " "${CMAKE_SOURCE_DIR}")
 
@@ -15,11 +15,11 @@ link_directories(${LIB})
 include_directories(${OPENGL_INCLUDE_DIRS})
 include_directories(${INCLUDE})
 
-set(SOURCE_FILES main.cpp gl_includes.h legendre.h Perf.h Perf.cpp stb_image_impl.cpp)
-add_executable(StupidSHTricks ${SOURCE_FILES})
+set(SOURCE_FILES main.cpp gl_includes.h Perf.h Perf.cpp stb_image_impl.cpp)
+add_executable(Minesweeper ${SOURCE_FILES})
 
-target_link_libraries(StupidSHTricks ${LIB}/libglew32.a)
-target_link_libraries(StupidSHTricks ${LIB}/libglfw3.a)
-target_link_libraries(StupidSHTricks ${OPENGL_LIBRARIES})
+target_link_libraries(Minesweeper ${LIB}/libglew32.a)
+target_link_libraries(Minesweeper ${LIB}/libglfw3.a)
+target_link_libraries(Minesweeper ${OPENGL_LIBRARIES})
 
 file(COPY ${CMAKE_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR}/)
