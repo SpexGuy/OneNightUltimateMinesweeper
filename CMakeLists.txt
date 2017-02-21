@@ -21,5 +21,6 @@ add_executable(Minesweeper ${SOURCE_FILES})
 target_link_libraries(Minesweeper ${LIB}/libglew32.a)
 target_link_libraries(Minesweeper ${LIB}/libglfw3.a)
 target_link_libraries(Minesweeper ${OPENGL_LIBRARIES})
+target_link_libraries(Minesweeper -static-libgcc -static-libstdc++)
 
 file(COPY ${CMAKE_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR}/)
